@@ -1,0 +1,18 @@
+# session-handoff 的 bundle patch：把插件行挂进 DSH 配置树。
+#
+# 改配置的方式：
+#   1) 在 profile 的 cordis.patch.yml 里用 `- id: session-handoff` + `config:` 覆盖（会整体替换 config）
+#   2) 或直接改这里的 config 后在 Plugins 页重载/重启
+# 改完配置需要重载该插件行（config 在 apply 时读取，热更不会重跑）。
+- insert:
+    - id: session-handoff
+      name: '@local/session-handoff'
+      config:
+        enabled: true
+        turnEndEnabled: true
+        summaryMode: llm
+        newSessionAsk: true
+        outputDir: ''
+        searchRoots:
+          - 'D:\DSH\项目'
+        maxAgeDays: 14

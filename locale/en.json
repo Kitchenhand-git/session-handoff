@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session handoff",
+    "description": "Refreshes a session handoff document at the end of every turn, and on a new conversation asks whether to resume from the previous handoff with its path"
+  }
+}

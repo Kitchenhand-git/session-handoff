@@ -1,0 +1,26 @@
+{
+  "name": "@local/session-handoff",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "会话交接单：每轮结束自动刷新本会话交接单，新会话询问是否按上一份续作",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "host/**/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
